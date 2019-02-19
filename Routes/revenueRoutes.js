@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Revenue = mongoose.model('Revenue')
 
+
 //show all revenues page
 router.get('/', (req, res) => {
     Revenue.find().then(result => {
@@ -36,8 +37,6 @@ router.post('/', (req, res) => {
 router.post('/', (req, res) => {
     Revenue.findOneAndRemove({_id: req.params.id}).then()
 })
-
-
 
 
 module.exports = router
