@@ -1,0 +1,14 @@
+[
+    {
+        "name": "booze",
+        "cost": 19.99
+    },
+    {
+        "name": "wal-mart",
+        "cost": 78.33
+    },
+    {
+        "name": "rent",
+        "cost": 602.19
+    }
+]
