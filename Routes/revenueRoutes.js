@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const mongoose = require('./../Models/Revenue')
 const Revenue = mongoose.model('Revenue')
 
 

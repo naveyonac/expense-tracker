@@ -8,7 +8,6 @@ const Revenue = revenueMongoose.model('Revenue')
 
 Revenue.remove({})
   .then(() => {
-      return
     Revenue.collection.insert(revenueData)
       .then((revenue) => {
         console.log(revenue)
