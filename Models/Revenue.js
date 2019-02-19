@@ -2,7 +2,7 @@ const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
 const RevenueSchema = new Schema ({
-	name : String,
+	name: String,
 	amount: Number
 })
 
