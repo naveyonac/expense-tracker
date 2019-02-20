@@ -11,7 +11,7 @@ const revenueData = require('./revenueSeed.json')
 Revenue.remove({})
   .then(() => {
    return Revenue.collection.insert(revenueData)
-      .then((revenue) => {
+      .then((revenue) =>{
         console.log(revenue)
         process.exit()
       })
