@@ -16,7 +16,7 @@ const app = express()
 
 app.use(parser.json())
 
-app.use(require('./Routes/indexRoutes'))
+app.use(require("./Routes/indexRoutes"))
 
 // app.use(require('./Routes/indexRoutes'))
 
