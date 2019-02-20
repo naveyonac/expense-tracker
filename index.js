@@ -50,6 +50,14 @@ app.get("/revenue", (req, res) => {
 
    } )
 
-app.listen(1000,(req, res) => {
-    console.log('listening on port 1000')
-} )
+
+
+  app.set('port', process.env.PORT || 1000)
+
+  app.listen(app.get('port'), () => {
+    console.log(`PORT: ${app.get('port')}`)
+  })
+
+// app.listen(1000,(req, res) => {
+//     console.log('listening on port 1000')
+// } )
