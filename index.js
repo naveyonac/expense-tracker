@@ -1,5 +1,5 @@
 const express = require('express')
-const bodyParser = require('body-parser')
+const parser = require('body-parser')
 const mongoose = require('./Models/Revenue')
 const Revenue = mongoose.model('Revenue')
 
@@ -8,20 +8,19 @@ const app = express()
 
 
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+app.use(parser.json())
 
 app.use(require('./Routes/indexRoutes'))
 
 
 
-app.get("/", (req, res) => {
+app.get("/revenue", (req, res) => {
     // response.send("Hello WOorld")
 
    
-        gif.find()
-          .then((gifs) => {
-            res.json(gifs)
+        Revenue.find()
+          .then((revenue) => {
+            res.json(revenue)
           })
           .catch((err) => {
             console.log(err)
