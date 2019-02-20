@@ -6,7 +6,8 @@ const mongoose = require('mongoose')
 // } else {
 //     mongoose.connect("mongodb://localhost/api-translations", { useNewUrlParser: true });
 // }
-mongoose.connect("mongodb://localhost/expense-tracker", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/expense-tracker", { useNewUrlParser: true })
+.then(connection => console.log(`Connection established to db`));
 
 
 mongoose.Promise = Promise
