@@ -9,13 +9,13 @@ const Expense = require('./Models/Expense')
 // const Expense = ExpenseMongoose.model('Revenue')
 // const Revenue = mongoose.model('Revenue')
 
-// const cors = require('cors')
+const cors = require('cors')
 const app = express()
 
 
 
 app.use(parser.json())
-
+app.use(cors());
 app.use(require('./Routes/indexRoutes'))
 
 // app.use(require('./Routes/indexRoutes'))
