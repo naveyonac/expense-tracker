@@ -18,6 +18,13 @@ The app is built using the MERN stack. MongoDB, Express, Node.js is used for the
 
 ## Functionality
 The user can click on the revenue or expense tab on the homepage to view a list of all current revenue and expense entries. The user can click on the add revenue or expense tab to add a new entry. The user can click on an individual entry to edit or delete it. 
+
 ## Getting Started
+To use the app, visit the public site hosted on Heroku:Pearls of Wisdom
+
+To set up the app locally:
+
+Fork and clone the project repository
+Install all dependencies
 ## Issues/Future Improvement
 ## Contribute

@@ -31,9 +31,11 @@ router.get('/:id', (req, res) => {
 
 //revenue post request for update
 router.put('/:id', (req, res) => {
-    Revenue.findOneAndUpdate({_id: req.params.id}).then(revenue => {
-        res.json(revenue)
-    })
+    Revenue.findOneAndUpdate({_id: req.params.id}, 
+        {name: req.body.name,
+        amount: req.body.amount})
+        .then( revenue => {res.json(revenue)}
+    )
 })
 
 //revenue post request for delete
