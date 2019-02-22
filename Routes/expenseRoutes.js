@@ -38,6 +38,15 @@ router.put('/:id', (req, res) => {
     )
 })
 
+// router.post('/', (req, res) => {
+//     Expense.create({
+//        name: req.body.name,
+//        amount: req.body.amount 
+//     }).then(newRevenue => {
+//         console.log(newRevenue)
+//         res.json(newRevenue)
+//     })
+// })
 
 
 //expense post request for delete

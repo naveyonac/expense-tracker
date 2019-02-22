@@ -33,7 +33,6 @@ router.get('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     Revenue.findOneAndUpdate({_id: req.params.id}).then(revenue => {
         res.json(revenue)
-    
     })
 })
 
