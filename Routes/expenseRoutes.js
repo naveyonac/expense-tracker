@@ -30,20 +30,23 @@ router.get('/:id', (req, res) => {
 })
 
 //expense post request for update
-// router.put('/:id', (req, res) => {
-//     Expense.findOneAndUpdate({_id: req.params.id}).then( expense => {res.json(expense)}
-//     )
-// })
-
-router.post('/', (req, res) => {
-    Expense.create({
-       name: req.body.name,
-       amount: req.body.amount 
-    }).then(newRevenue => {
-        console.log(newRevenue)
-        res.json(newRevenue)
-    })
+router.put('/:id', (req, res) => {
+    Expense.findOneAndUpdate({_id: req.params.id}, 
+        {name: req.body.name,
+        amount: req.body.amount})
+        .then( expense => {res.json(expense)}
+    )
 })
+
+// router.post('/', (req, res) => {
+//     Expense.create({
+//        name: req.body.name,
+//        amount: req.body.amount 
+//     }).then(newRevenue => {
+//         console.log(newRevenue)
+//         res.json(newRevenue)
+//     })
+// })
 
 
 //expense post request for delete
