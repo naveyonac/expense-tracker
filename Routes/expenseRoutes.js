@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
 })
 
 //expense post request for update
-router.post('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
     Expense.findOneAndUpdate({_id: req.params.id}).then( expense => {res.json(expense)}
     )
 })
@@ -38,8 +38,8 @@ router.post('/:id', (req, res) => {
 
 
 //expense post request for delete
-router.post('/:id', (req, res) => {
-    Revenue.findOneAndRemove({_id: req.params.id}).then()
+router.delete('/:id', (req, res) => {
+    Expense.findOneAndRemove({_id: req.params.id}).then()
 })
 
 
