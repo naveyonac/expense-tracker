@@ -1,31 +1,29 @@
-const expenseMongoose = require('../Models/Expense')
-const revenueMongoose = require('../Models/Revenue')
+// const expenseMongoose = require('../Models/Expense')
+// const revenueMongoose = require('../Models/Revenue')
+
+const Expense = require('../Models/Expense')
+const Revenue = require('../Models/Revenue')
 const expenseData = require('./expenseSeed.json')
 const revenueData = require('./revenueSeed.json')
-const Expense = expenseMongoose.model('Expense')
-const Revenue = revenueMongoose.model('Revenue')
-
+// const Expense = expenseMongoose.model('Expense')
+// const Revenue = revenueMongoose.model('Revenue')
 
 Revenue.remove({})
   .then(() => {
-    Revenue.collection.insert(revenueData)
-      .then((revenue) => {
+   return Revenue.collection.insert(revenueData)
+      .then((revenue) =>{
         console.log(revenue)
         process.exit()
       })
   })
-  .catch((err) => {
-    console.log(err)
-  })
+ 
 
   Expense.remove({})
   .then(() => {
-    Expense.collection.insert(expenseData)
+   return Expense.collection.insert(expenseData)
       .then((revenue) => {
         console.log(revenue)
         process.exit()
       })
   })
-  .catch((err) => {
-    console.log(err)
-  })
+  
