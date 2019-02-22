@@ -39,7 +39,9 @@ router.put('/:id', (req, res) => {
 
 //expense post request for delete
 router.delete('/:id', (req, res) => {
-    Expense.findOneAndRemove({_id: req.params.id}).then()
+    Expense.findOneAndRemove({_id: req.params.id}).then(result => {
+        res.json(result)
+    })
 })
 
 
