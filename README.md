@@ -4,7 +4,7 @@
 ## Description
 The Fun Budget Tool is an easy-to-use budgt planning app that allows users to track their personal finances. The app allows users to create simple lists of incoming revenue and outgoing expenses and keep track of the balance. 
 
-![]()
+![](planning/screen-shot.png)
 ## User Stories
 
 - *I have a tendency to overspend, and need an app that will help me track my spending.*
