@@ -31,18 +31,18 @@ router.get('/:id', (req, res) => {
 
 //revenue post request for update
 router.put('/:id', (req, res) => {
-    Revenue.findOneAndUpdate({_id: req.params.id}).then(result => {
-        res.json(result)
-    })
+    Revenue.findOneAndUpdate({_id: req.params.id}, 
+        {name: req.body.name,
+        amount: req.body.amount})
+        .then( revenue => {res.json(revenue)}
+    )
 })
 
 //revenue post request for delete
 router.delete('/:id', (req, res) => {
-    Revenue.findOneAndRemove({_id: req.params.id}).then(
-        Revenue.find().then(result => {
-            res.json("success")
-        })
-    )
+    Revenue.findOneAndRemove({_id: req.params.id}).then(result => {
+        res.json(result)
+    })
 })
 
 

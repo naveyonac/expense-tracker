@@ -16,8 +16,9 @@ app.use(cors())
 
 
 app.use(parser.json())
-
-app.use(require("./Routes/indexRoutes"))
+app.use(cors());
+app.use(require('./Routes/indexRoutes'))
+app.use(cors());
 
 // app.use(require('./Routes/indexRoutes'))
 
@@ -53,8 +54,16 @@ app.get("/revenue", (req, res) => {
 
 
 
+<<<<<<< HEAD
 app.use(require('./Routes/indexRoutes'))
 app.use(cors());
+=======
+  app.set('port', process.env.PORT || 1000)
+
+  app.listen(app.get('port'), () => {
+    console.log(`PORT: ${app.get('port')}`)
+  })
+>>>>>>> de1ce492be3bed60ca82a2b4d7ebeed02764224f
 
 // app.listen(1000,(req, res) => {
 //     console.log('listening on port 1000')
